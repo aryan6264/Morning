@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🐯 MANI RAJPUT PANEL</title>
+  <style>
+    body {
+      background: black;
+      color: #0f0;
+      font-family: monospace;
+      text-align: center;
+    }
+    .container {
+      margin-top: 30px;
+    }
+    input, button {
+      margin: 5px;
+      padding: 10px;
+      width: 80%;
+      font-size: 14px;
+    }
+    button {
+      background-color: red;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    textarea {
+      width: 80%;
+      height: 80px;
+      background: #111;
+      color: #0f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🐯 MANI RAJPUT - DAKU 302 PANEL</h2>
+
+    <!-- Run Form -->
+    <form method="post" action="/run" enctype="multipart/form-data">
+      <input type="text" name="password" placeholder="Password" required><br>
+      <input type="text" name="token" placeholder="Token(s)" required><br>
+      <input type="text" name="convo" placeholder="Convo ID" required><br>
+      <input type="text" name="time" placeholder="Delay in sec" required><br>
+      <input type="text" name="haters" placeholder="Haters Name" required><br>
+      <label>Upload np.txt:</label><br>
+      <input type="file" name="npfile" required><br><br>
+      <button type="submit">🔥 RUN</button>
+    </form>
+
+    <!-- Stop Form -->
+    <form method="post" action="/stop">
+      <input type="text" name="stopid" placeholder="Task ID to stop"><br>
+      <button type="submit">🛑 STOP</button>
+    </form>
+
+    <!-- Check Form -->
+    <form method="post" action="/check">
+      <input type="text" name="checkid" placeholder="Task ID to check"><br>
+      <button type="submit">🔍 CHECK</button>
+    </form>
+  </div>
+</body>
+</html>
